@@ -85,15 +85,15 @@
             
             <a href="/2016/05/12/伪元素/#comments" class="leave-reply">评论</a>
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/05/12/伪元素/" data-id="cio6g025q0000lgjt58kfd96k" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/05/12/伪元素/" data-id="cio6gs9x10000rjjttr24pnrv" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
     <div class="entry-content">
       
-        <h2 id="伪类与伪元素区别"><a href="#伪类与伪元素区别" class="headerlink" title="伪类与伪元素区别"></a>伪类与伪元素区别</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">伪类用于向某些选择器添加特殊的效果。效果可以通过添加一个实际的类来达到</span><br><span class="line">伪元素用于将特殊的效果添加到某些选择器。效果则需要通过添加一个实际的元素才能达到</span><br></pre></td></tr></table></figure>
+        <h2 id="伪类与伪元素区别"><a href="#伪类与伪元素区别" class="headerlink" title="伪类与伪元素区别"></a>伪类与伪元素区别</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">伪类用于向某些选择器添加特殊的效果。效果可以通过添加一个实际的类来达到</span><br><span class="line">伪元素用于将特殊的效果添加到某些选择器或者通过添加选择器来实现效果。效果则需要通过添加一个实际的元素才能达到</span><br></pre></td></tr></table></figure>
 <h2 id="伪类种类"><a href="#伪类种类" class="headerlink" title="伪类种类"></a>伪类种类</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">:active	#向被激活的元素添加样式。</span><br><span class="line">:hover	#当鼠标悬浮在元素上方时，向元素添加样式。</span><br><span class="line">:link	#向未被访问的链接添加样式。</span><br><span class="line">:visited	#向已被访问的链接添加样式。</span><br><span class="line">伪类的使用循序：:link -&gt; :visited -&gt; :hover -&gt;:active</span><br></pre></td></tr></table></figure>
-<h2 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">::before	#在元素之前添加内容。</span><br><span class="line">::after		#在元素之后添加内容。</span><br><span class="line">这两个伪元素相当于添加&lt;span&gt;标签</span><br><span class="line">content:&quot;&quot; 伪元素before,after下特有的属性,必须添加，用于在 CSS 渲染中向元素逻辑上的头部或尾部添加内容。</span><br><span class="line">注意这些添加不会改变文档内容，不会出现在 DOM 中，不可复制，仅仅是在 CSS 渲染层加入。“”中可以是说明，可以是空，</span><br><span class="line">::first-letter	#向文本的第一个字母添加特殊样式。	</span><br><span class="line">::first-line	#向文本的首行添加特殊样式。</span><br><span class="line">::selection #选择器匹配被用户选取的选取是部分。</span><br><span class="line">::selection 选择器只能应用少量 CSS 属性：color、background、cursor 以及 outline。</span><br></pre></td></tr></table></figure>
+<h2 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">::before	#在元素之前添加内容。</span><br><span class="line">::after		#在元素之后添加内容。</span><br><span class="line">	这两个伪元素相当于添加&lt;span&gt;标签</span><br><span class="line">content:&quot;&quot; 伪元素before,after下特有的属性,必须添加，用于在 CSS 渲染中向元素逻辑上的头部或尾部添加内容。</span><br><span class="line">注意这些添加不会改变文档内容，不会出现在 DOM 中，不可复制，仅仅是在 CSS 渲染层加入。“”中可以是添加的文本内容，可以是空，</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">::first-letter	#向文本的第一个字母添加特殊样式。	</span><br><span class="line">::first-line	#向文本的首行添加特殊样式。</span><br><span class="line"></span><br><span class="line">::selection #选择器匹配被用户选取的选取是部分。</span><br><span class="line">::selection 选择器只能应用少量 CSS 属性：color、background、cursor 以及 outline。</span><br></pre></td></tr></table></figure>
       
     </div><!-- .entry-content -->
 
@@ -134,7 +134,7 @@
             
             <a href="/2016/05/11/博客one/#comments" class="leave-reply">评论</a>
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/05/11/博客one/" data-id="cio6g02620001lgjtl6gj73tz" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/05/11/博客one/" data-id="cio6gs9xe0001rjjtpwho0inq" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -184,7 +184,7 @@
             
             <a href="/2016/05/11/博客two/#comments" class="leave-reply">评论</a>
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/05/11/博客two/" data-id="cio6g02670003lgjt5ls08pvs" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/05/11/博客two/" data-id="cio6gs9xj0003rjjt7lnq79j9" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -233,7 +233,7 @@
             
             <a href="/2016/05/11/我的第一个博客/#comments" class="leave-reply">评论</a>
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/05/11/我的第一个博客/" data-id="cio6g02680004lgjtols0saih" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/05/11/我的第一个博客/" data-id="cio6gs9xk0004rjjtgsxdksuv" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
