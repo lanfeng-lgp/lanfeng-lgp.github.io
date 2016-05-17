@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="无聊之作" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>jade的使用(一) | 苹果与梨的世界</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="jade是一个基于javascript，可以运行与node与浏览器环境的一个前端模板引擎。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jade的使用(一)">
+<meta property="og:url" content="http://yoursite.com/2016/05/17/jade的使用/index.html">
+<meta property="og:site_name" content="苹果与梨的世界">
+<meta property="og:description" content="jade是一个基于javascript，可以运行与node与浏览器环境的一个前端模板引擎。">
+<meta property="og:updated_time" content="2016-05-17T07:54:02.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jade的使用(一)">
+<meta name="twitter:description" content="jade是一个基于javascript，可以运行与node与浏览器环境的一个前端模板引擎。">
+  
+    <link rel="alternative" href="http://lanfeng-lgp.github.io/" title="苹果与梨的世界" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://www.rzhf.com/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="苹果与梨的世界" rel="home">苹果与梨的世界</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">“欢迎各路水果蔬菜分享讨论”--来自苹果梨的愿望</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-jade的使用" class="post-jade的使用 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      jade的使用(一)
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="/2016/05/17/jade的使用/#comments" class="leave-reply">评论</a>
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/05/17/jade的使用/" data-id="ciob2tqtt00012kjteg5xi74p" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h4 id="jade是一个基于javascript，可以运行与node与浏览器环境的一个前端模板引擎。"><a href="#jade是一个基于javascript，可以运行与node与浏览器环境的一个前端模板引擎。" class="headerlink" title="jade是一个基于javascript，可以运行与node与浏览器环境的一个前端模板引擎。"></a>jade是一个基于javascript，可以运行与node与浏览器环境的一个前端模板引擎。</h4><a id="more"></a>
+<h2 id="1-jade的安装"><a href="#1-jade的安装" class="headerlink" title="1.jade的安装"></a>1.jade的安装</h2><p><span style="font-size:11px;color:#555;"><br>1.在项目根目录下依次安装插件:    (该插件安装必须在nodeJs以及gulp安装后安装)</span><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev gulp-jade	<span class="comment">#安装jade插件</span></span><br></pre></td></tr></table></figure></p>
+<p><span style="font-size:11px;color:#555;"><br>2.在gulpfile.js 的文件添加：</span><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var jade = require(<span class="string">'gulp-jade'</span>);<span class="comment">#调用gulp中的concat插件</span></span><br><span class="line">gulp.task(<span class="string">'gulpjade'</span>, <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line"> <span class="built_in">return</span> gulp.src(<span class="string">'jade/*.jade'</span>)  <span class="comment">#获取jade文件夹下的所有的jade文件</span></span><br><span class="line">    .pipe(jade())		<span class="comment">#将一个个jade文件分别转换成标准的html格式</span></span><br><span class="line">    .pipe(gulp.dest(<span class="string">'New/'</span>));	<span class="comment">#设置输出位置并输出文件</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p><span style="font-size:11px;color:#555;"><br>3.运行 gulp：(默认执行default函数)</span><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gulp gulpjade    <span class="comment">#执行gulpjade函数将jade文件分别转换成标准的html格式</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="2-jade的使用"><a href="#2-jade的使用" class="headerlink" title="2.jade的使用"></a>2.jade的使用</h2><p><span style="font-size:11px;color:#555;"><br>1.jade的基本格式</span><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">doctype</span><br><span class="line">html</span><br><span class="line">	head</span><br><span class="line">		title</span><br><span class="line">		meta(charset=<span class="string">"UTF-8"</span>)</span><br><span class="line">	body</span><br><span class="line">		include head.jade</span><br><span class="line">		div.bodyer(style=<span class="string">"width:120px;height:120px;background:red"</span>)</span><br><span class="line">			span 第二</span><br><span class="line">			    | 第三</span><br><span class="line">		// 注释一</span><br><span class="line">		//-注释二</span><br><span class="line">		//</span><br><span class="line">			注释三</span><br><span class="line">			注释四</span><br></pre></td></tr></table></figure></p>
+<p><span style="font-size:11px;color:#555;"><br>转换成HtmL</span><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;title&gt;&lt;/title&gt;</span><br><span class="line">		&lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div class=<span class="string">"header"</span>&gt;</span><br><span class="line">			&lt;h2&gt;第一&lt;/h2&gt;</span><br><span class="line">			&lt;div&gt;</span><br><span class="line">				&lt;img src=<span class="string">"p.png"</span> title=<span class="string">"图片"</span>&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		&lt;div style=<span class="string">"width:120px;height:120px;background:red"</span> class=<span class="string">"bodyer"</span>&gt;</span><br><span class="line">			&lt;span&gt;第二</span><br><span class="line">			第三&lt;/span&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		&lt;!-- 注释一--&gt;</span><br><span class="line">		&lt;!--注释三</span><br><span class="line">		    注释四--&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p><span style="font-size:11px;color:#555;"><br>1、在jade中添加标签通过直接添加标签名来实现；<br>2、对于同一级元素，使用tab使同级元素距边界同距离左对齐，对于父子级元素，使用tab使子级元素水平方向多余父级一个tab位置。<strong style="color:#090;">不能使用空格来实现距离对齐</strong>；<br>3、添加类名，id名：在元素后直接加类名，id名,    div.className  或 div.IdName；<br>4、添加元素的属性：在元素后直接加（），在（）添加属性  a(href=”#”,title=”链接”)；<br>5、添加文本内容：(1)通过在文字前面添加竖线符号“|”可让 jade 原样输出内容;(2)在html标签标记<br>后面通过空格隔开文本内容。<br>6、添加文本注释：可以通过双斜杠进行注释，jade有3种注释方式，可以分别对应输出html注释、不输出html注释、块级html注释。<br><strong style="color:#090;">具体效果见上</strong><br></span></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2016/05/17/jade的使用/">
+    <time datetime="2016-05-17T06:06:25.000Z" class="entry-date">
+        2016-05-17
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jade的使用/">jade的使用</a></li></ul>
+
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2016/05/16/gulp构建工具/" rel="next">gulp构建工具 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+<section id="comments">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-jade的使用" data-title="jade的使用(一)" data-url="http://yoursite.com/2016/05/17/jade的使用/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:'true'};
+    (function() {
+	  var ds = document.createElement('script');
+	  ds.type = 'text/javascript';ds.async = true;
+	  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	  ds.charset = 'UTF-8';
+	  (document.getElementsByTagName('head')[0]
+	   || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+  <!-- 多说公共JS代码 end -->
+</section>
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    <aside class="widget">
+	<h3 class="widget-title">作者信息</h3>
+	<div class="widget-content">
+		<a href="http://user.qzone.qq.com/1739059814/" text-align: center;><img style="width: 50%;height: 50%; border-radius: 50%" src="http://i4.buimg.com/bcbe90068148b736.jpg" alt=""></a>	
+	  	<p style="font-size: 1.5em;color:rgb(140,187,193);text-indent:2em;">李国平</p> 
+	</div>
+</aside>
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Music</h3>
+    <div class="widget-content">
+      <audio src="http://so1.111ttt.com:8282/2015/1/03m/22/96221801351.m4a?tflag=1463151342&amp;pin=ba0fcaeba2ae9fe3fa16af670d3a5210&amp;ip=101.95.141.6#.mp3" controls="controls" loop="loop"
+             style="width:100%">
+        您的浏览器不支持 audio 标签。
+      </audio>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2016/05/17/jade的使用/">jade的使用(一)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/16/gulp构建工具/">gulp构建工具</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/14/居中/">居中</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/12/伪元素/">伪元素</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/11/博客one/">创建git仓库</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-content tagcloud">
+      <a href="/tags/git仓库/" style="font-size: 10px;">git仓库</a> <a href="/tags/hexo博客/" style="font-size: 10px;">hexo博客</a> <a href="/tags/jade的使用/" style="font-size: 10px;">jade的使用</a> <a href="/tags/js代码压缩-css代码压缩-html代码压缩/" style="font-size: 10px;">js代码压缩 css代码压缩 html代码压缩</a> <a href="/tags/nodejs思维导图-git思维导图/" style="font-size: 10px;">nodejs思维导图 git思维导图</a> <a href="/tags/伪元素-伪类/" style="font-size: 10px;">伪元素 伪类</a> <a href="/tags/水平居中-垂直居中/" style="font-size: 10px;">水平居中 垂直居中</a>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li class='link'><a href='http://ahz549467483.github.io'>码猿之家</a></li>
+        
+          <li class='link'><a href='http://kangyuf.github.io/'>小康的博客</a></li>
+        
+          <li class='link'><a href='http://wangjing991.github.io/'>Jimwan</a></li>
+        
+          <li class='link'><a href='http://liushengguang.github.io/'>阳光与你同在</a></li>
+        
+          <li class='link'><a href='http://wangbin5614.github.io/'>细流</a></li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2016 Apple Pear
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

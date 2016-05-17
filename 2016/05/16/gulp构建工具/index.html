@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/05/16/gulp构建工具/index.html">
 <meta property="og:site_name" content="苹果与梨的世界">
 <meta property="og:description" content="安装gulp工具1.全局安装 gulp：1npm install -g gulp">
-<meta property="og:updated_time" content="2016-05-17T05:58:44.000Z">
+<meta property="og:updated_time" content="2016-05-17T06:48:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gulp构建工具">
 <meta name="twitter:description" content="安装gulp工具1.全局安装 gulp：1npm install -g gulp">
@@ -84,7 +84,7 @@
             
             <a href="/2016/05/16/gulp构建工具/#comments" class="leave-reply">评论</a>
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/05/16/gulp构建工具/" data-id="ciob17s670000v4jtuedc36oi" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/05/16/gulp构建工具/" data-id="ciob2tqto00002kjt3sdxh1gd" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -97,8 +97,8 @@
 <p><span style="font-size:11px;color:#555;"><br>4.在项目根目录下创建一个名为 gulpfile.js 的文件：</span><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(<span class="string">'gulp'</span>);</span><br><span class="line">gulp.task(<span class="string">'default'</span>, <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">  // 将你的默认的任务代码放在这</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 <p><span style="font-size:11px;color:#555;"><br>5.运行 gulp：(默认执行default函数)</span><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gulp</span><br></pre></td></tr></table></figure></p>
 <p><a href="http://www.gulpjs.com.cn/" target="_blank" rel="external">gulp官网</a>    <a href="http://gulpjs.com/plugins/" target="_blank" rel="external">gulp插件</a></p>
-<h2 id="文件合并"><a href="#文件合并" class="headerlink" title="文件合并"></a>文件合并</h2><p><span style="font-size:11px;color:#555;"><br>1.在项目根目录下依次安装插件:</span><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev gulp-concat	<span class="comment">#安装文件合并插件</span></span><br></pre></td></tr></table></figure></p>
-<p><span style="font-size:11px;color:#555;"><br>2.在gulpfile.js 的文件添加：</span><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var concat = require(<span class="string">'gulp-concat'</span>);<span class="comment">#调用gulp中的concat插件</span></span><br><span class="line">gulp.task(<span class="string">'default'</span>, <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line"> <span class="built_in">return</span> gulp.src(<span class="string">'./js/*.js'</span>)  <span class="comment">#获取js文件夹下的所有的js文件</span></span><br><span class="line">    .pipe(concat(<span class="string">'new.js'</span>))		<span class="comment">#将文件合并成一个文件，给出命名</span></span><br><span class="line">    .pipe(gulp.dest(<span class="string">'New/'</span>));	<span class="comment">#设置输出位置并输出文件</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h2 id="文件合并"><a href="#文件合并" class="headerlink" title="文件合并"></a>文件合并</h2><p><span style="font-size:11px;color:#555;"><br>1.在项目根目录下依次安装插件:</span><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev gulp-concat	<span class="comment">#安装合并插件</span></span><br></pre></td></tr></table></figure></p>
+<p><span style="font-size:11px;color:#555;"><br>2.在gulpfile.js 的文件添加：</span><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var concat = require(<span class="string">'gulp-concat'</span>);<span class="comment">#调用gulp中的concat插件</span></span><br><span class="line">gulp.task(<span class="string">'default'</span>, <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line"> <span class="built_in">return</span> gulp.src(<span class="string">'js/*.js'</span>)  <span class="comment">#获取js文件夹下的所有的js文件</span></span><br><span class="line">    .pipe(concat(<span class="string">'new.js'</span>))		<span class="comment">#将文件合并成一个文件，给出命名</span></span><br><span class="line">    .pipe(gulp.dest(<span class="string">'New/'</span>));	<span class="comment">#设置输出位置并输出文件</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 <p><span style="font-size:11px;color:#555;"><br>3.运行 gulp：(默认执行default函数)</span><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gulp default</span><br></pre></td></tr></table></figure></p>
 <h2 id="html代码压缩"><a href="#html代码压缩" class="headerlink" title="html代码压缩"></a>html代码压缩</h2><p><span style="font-size:11px;color:#555;"><br>1.在项目根目录下依次安装插件:</span><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev gulp-htmlmin <span class="comment">#安装根据指定的书写规则来对html文件进行压缩插件</span></span><br></pre></td></tr></table></figure></p>
 <p><span style="font-size:11px;color:#555;"><br>2.在gulpfile.js 的文件添加：</span><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var htmlmin = require(<span class="string">'gulp-htmlmin'</span>);<span class="comment">#调用gulp中的htmlmin插件</span></span><br><span class="line">gulp.task(<span class="string">'compress'</span>, <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">	<span class="built_in">return</span> gulp.src(<span class="string">'new.html'</span>)  <span class="comment">#获取目录文件夹下的new.html文件</span></span><br><span class="line">	 	.pipe(htmlmin(&#123;collapseWhitespace: <span class="literal">true</span>&#125;))	<span class="comment">#将html文件进行最小压缩</span></span><br><span class="line">	 	.pipe(gulp.dest(<span class="string">'New/'</span>));	<span class="comment">#设置输出位置并输出文件</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
@@ -131,6 +131,8 @@
     
 <nav class="nav-single">
     <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2016/05/17/jade的使用/" rel="prev"><span class="meta-nav">←</span> jade的使用(一)</a></span>
     
     
         <span class="nav-next"><a href="/2016/05/14/居中/" rel="next">居中 <span class="meta-nav">→</span></a></span>
@@ -201,6 +203,10 @@
       <ul>
         
           <li>
+            <a href="/2016/05/17/jade的使用/">jade的使用(一)</a>
+          </li>
+        
+          <li>
             <a href="/2016/05/16/gulp构建工具/">gulp构建工具</a>
           </li>
         
@@ -216,10 +222,6 @@
             <a href="/2016/05/11/博客one/">创建git仓库</a>
           </li>
         
-          <li>
-            <a href="/2016/05/11/博客two/">hexo博客</a>
-          </li>
-        
       </ul>
     </div>
   </aside>
@@ -229,7 +231,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget-content tagcloud">
-      <a href="/tags/git仓库/" style="font-size: 10px;">git仓库</a> <a href="/tags/hexo博客/" style="font-size: 10px;">hexo博客</a> <a href="/tags/js代码压缩-css代码压缩-html代码压缩/" style="font-size: 10px;">js代码压缩 css代码压缩 html代码压缩</a> <a href="/tags/nodejs思维导图-git思维导图/" style="font-size: 10px;">nodejs思维导图 git思维导图</a> <a href="/tags/伪元素-伪类/" style="font-size: 10px;">伪元素 伪类</a> <a href="/tags/水平居中-垂直居中/" style="font-size: 10px;">水平居中 垂直居中</a>
+      <a href="/tags/git仓库/" style="font-size: 10px;">git仓库</a> <a href="/tags/hexo博客/" style="font-size: 10px;">hexo博客</a> <a href="/tags/jade的使用/" style="font-size: 10px;">jade的使用</a> <a href="/tags/js代码压缩-css代码压缩-html代码压缩/" style="font-size: 10px;">js代码压缩 css代码压缩 html代码压缩</a> <a href="/tags/nodejs思维导图-git思维导图/" style="font-size: 10px;">nodejs思维导图 git思维导图</a> <a href="/tags/伪元素-伪类/" style="font-size: 10px;">伪元素 伪类</a> <a href="/tags/水平居中-垂直居中/" style="font-size: 10px;">水平居中 垂直居中</a>
     </div>
   </aside>
 
