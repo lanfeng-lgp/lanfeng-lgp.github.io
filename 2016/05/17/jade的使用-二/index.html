@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="无聊之作" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>jade的使用(二) | 苹果与梨的世界</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1、jade的变量的使用：(1)使用 “=” 号输出变量值到元素内；(2)通过 #{variable} 插入相应的变量值(3)= 默认会转义内容，如果不被转义的，在=前面添加!(4)如果要输出 #{},那就得使用\来转义  #{};(5)#{}内容默认特殊字符会被转义，如要不转义的，用!替换#来调用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jade的使用(二)">
+<meta property="og:url" content="http://yoursite.com/2016/05/17/jade的使用-二/index.html">
+<meta property="og:site_name" content="苹果与梨的世界">
+<meta property="og:description" content="1、jade的变量的使用：(1)使用 “=” 号输出变量值到元素内；(2)通过 #{variable} 插入相应的变量值(3)= 默认会转义内容，如果不被转义的，在=前面添加!(4)如果要输出 #{},那就得使用\来转义  #{};(5)#{}内容默认特殊字符会被转义，如要不转义的，用!替换#来调用">
+<meta property="og:updated_time" content="2016-05-17T11:14:41.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jade的使用(二)">
+<meta name="twitter:description" content="1、jade的变量的使用：(1)使用 “=” 号输出变量值到元素内；(2)通过 #{variable} 插入相应的变量值(3)= 默认会转义内容，如果不被转义的，在=前面添加!(4)如果要输出 #{},那就得使用\来转义  #{};(5)#{}内容默认特殊字符会被转义，如要不转义的，用!替换#来调用">
+  
+    <link rel="alternative" href="http://lanfeng-lgp.github.io/" title="苹果与梨的世界" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://www.rzhf.com/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="苹果与梨的世界" rel="home">苹果与梨的世界</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">“欢迎各路水果蔬菜分享讨论”--来自苹果梨的愿望</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-jade的使用-二" class="post-jade的使用-二 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      jade的使用(二)
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="/2016/05/17/jade的使用-二/#comments" class="leave-reply">评论</a>
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/05/17/jade的使用-二/" data-id="ciob7fch00000cujttvglvdkf" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="1、jade的变量的使用："><a href="#1、jade的变量的使用：" class="headerlink" title="1、jade的变量的使用："></a>1、jade的变量的使用：</h3><p>(1)使用 “=” 号输出变量值到元素内；<br>(2)通过 #{variable} 插入相应的变量值<br>(3)= 默认会转义内容，如果不被转义的，在=前面添加!<br>(4)如果要输出 #{},那就得使用\来转义  #{};<br>(5)#{}内容默认特殊字符会被转义，如要不转义的，用!替换#来调用<br><a id="more"></a></p>
+<h4 id="例如："><a href="#例如：" class="headerlink" title="例如："></a>例如：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- var name = <span class="string">'welcome,&lt;span&gt;hello;&lt;/span&gt;'</span></span><br><span class="line">p= <span class="string">'welcome,&lt;span&gt;hello;&lt;/span&gt;'</span></span><br><span class="line">p!= <span class="string">'welcome,&lt;span&gt;hello;&lt;/span&gt;'</span></span><br><span class="line">p <span class="comment">#&#123;name&#125;</span></span><br><span class="line">p \<span class="comment">#&#123;name&#125;</span></span><br><span class="line">p !&#123;name&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="转换结果："><a href="#转换结果：" class="headerlink" title="转换结果："></a>转换结果：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;welcome,&amp;lt;span&amp;gt;hello;&amp;lt;/span&amp;gt;&lt;/p&gt;</span><br><span class="line">&lt;p&gt;welcome,&lt;span&gt;hello;&lt;/span&gt;&lt;/p&gt;</span><br><span class="line">&lt;p&gt;welcome,&amp;lt;span&amp;gt;hello;&amp;lt;/span&amp;gt;&lt;/p&gt;</span><br><span class="line">&lt;p&gt;<span class="comment">#&#123;name&#125;&lt;/p&gt;</span></span><br><span class="line">&lt;p&gt;welcome,&lt;span&gt;hello;&lt;/span&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="2、jade-支持-循环、if、case条件判断"><a href="#2、jade-支持-循环、if、case条件判断" class="headerlink" title="2、jade 支持 循环、if、case条件判断"></a>2、jade 支持 循环、if、case条件判断</h3><p>(1)循环语法结构：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- each val[,key] <span class="keyword">in</span> obj</span><br><span class="line">     val是值</span><br><span class="line">     key是键，可选</span><br><span class="line">     obj是对象，array or object</span><br><span class="line">- <span class="keyword">for</span> (var i = 0; i &lt; 3; i++)</span><br></pre></td></tr></table></figure></p>
+<p>(2)if语法结构：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(判断)</span><br><span class="line">    //操作</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">   //操作</span><br></pre></td></tr></table></figure></p>
+<p>(3)case语法结构：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span> 条件</span><br><span class="line">    when 条件一</span><br><span class="line">       //操作</span><br><span class="line">    when 条件二</span><br><span class="line">       //操作</span><br><span class="line">        ·</span><br><span class="line">    default 其他条件</span><br><span class="line">       //操作</span><br></pre></td></tr></table></figure></p>
+<h4 id="例子："><a href="#例子：" class="headerlink" title="例子："></a>例子：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">//<span class="keyword">for</span>循环</span><br><span class="line">- <span class="keyword">for</span> (var i = 0; i &lt; 3; i++)</span><br><span class="line">	li 排名</span><br><span class="line">//数组</span><br><span class="line">- var <span class="built_in">jobs</span> = [<span class="string">"第一"</span>, <span class="string">"第二"</span>, <span class="string">"第三"</span>]</span><br><span class="line">each job <span class="keyword">in</span> <span class="built_in">jobs</span></span><br><span class="line">	li= job</span><br><span class="line">//对象</span><br><span class="line">- var <span class="built_in">jobs</span> = &#123;<span class="string">"第一"</span>:<span class="string">"梨"</span>, <span class="string">"第二"</span>:<span class="string">"苹果"</span>, <span class="string">"第三"</span>:<span class="string">"芒果"</span>&#125;</span><br><span class="line">each val,key <span class="keyword">in</span> <span class="built_in">jobs</span></span><br><span class="line">	li <span class="comment">#&#123;key&#125; : #&#123;val&#125;</span></span><br><span class="line">//<span class="keyword">if</span>判断</span><br><span class="line">- var apples = 1</span><br><span class="line"><span class="keyword">if</span>(apples&gt;0)</span><br><span class="line">	p you have some apples</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">	p you have no apples</span><br><span class="line">//<span class="keyword">case</span>选择</span><br><span class="line"><span class="keyword">case</span> apples</span><br><span class="line">	when 0</span><br><span class="line">		p you have no apples</span><br><span class="line">	when 1</span><br><span class="line">		p you have an apple</span><br><span class="line">	default</span><br><span class="line">		p you have <span class="comment">#&#123;apples&#125; apples</span></span><br></pre></td></tr></table></figure>
+<h4 id="结果："><a href="#结果：" class="headerlink" title="结果："></a>结果：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//<span class="keyword">for</span>循环</span><br><span class="line">&lt;li&gt;排名&lt;/li&gt;</span><br><span class="line">&lt;li&gt;排名&lt;/li&gt;</span><br><span class="line">&lt;li&gt;排名&lt;/li&gt;</span><br><span class="line">//数组</span><br><span class="line">&lt;li&gt;第一&lt;/li&gt;</span><br><span class="line">&lt;li&gt;第二&lt;/li&gt;</span><br><span class="line">&lt;li&gt;第三&lt;/li&gt;</span><br><span class="line">//对象</span><br><span class="line">&lt;li&gt;第一 : 梨&lt;/li&gt;</span><br><span class="line">&lt;li&gt;第二 : 苹果&lt;/li&gt;</span><br><span class="line">&lt;li&gt;第三 : 芒果&lt;/li&gt;</span><br><span class="line">//<span class="keyword">if</span>判断</span><br><span class="line">&lt;p&gt;you have some apples&lt;/p&gt;</span><br><span class="line">//<span class="keyword">case</span>选择</span><br><span class="line">&lt;p&gt;you have an apple&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="3、include-包含文件"><a href="#3、include-包含文件" class="headerlink" title="3、include 包含文件"></a>3、include 包含文件</h3><p>使用 Includes 在模板中包含其他模板的内容。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">head            <span class="comment">#文件head.jade的内容</span></span><br><span class="line">  title 我的网站</span><br><span class="line">  script(src=<span class="string">'/javascripts/swiper.js'</span>)</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">doctype html</span><br><span class="line">html</span><br><span class="line">  include jade/head.jade     <span class="comment">#include + 文件地址</span></span><br><span class="line">  body</span><br><span class="line">     h1 我的网站</span><br><span class="line">     p 欢迎来到我的网站。</span><br></pre></td></tr></table></figure>
+<p>结果：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;title&gt;我的网站&lt;/title&gt;</span><br><span class="line">    &lt;script src=<span class="string">'/javascripts/swiper.js'</span>&gt;&lt;/script&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;h1&gt;我的网站&lt;/h1&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<!--### 4、extends 模板引用
+
+```bash
+```-->
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2016/05/17/jade的使用-二/">
+    <time datetime="2016-05-17T07:57:23.000Z" class="entry-date">
+        2016-05-17
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2016/05/17/jade的使用/" rel="next">jade的使用(一) <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+<section id="comments">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-jade的使用-二" data-title="jade的使用(二)" data-url="http://yoursite.com/2016/05/17/jade的使用-二/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:'true'};
+    (function() {
+	  var ds = document.createElement('script');
+	  ds.type = 'text/javascript';ds.async = true;
+	  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	  ds.charset = 'UTF-8';
+	  (document.getElementsByTagName('head')[0]
+	   || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+  <!-- 多说公共JS代码 end -->
+</section>
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    <aside class="widget">
+	<h3 class="widget-title">作者信息</h3>
+	<div class="widget-content">
+		<a href="http://user.qzone.qq.com/1739059814/" text-align: center;><img style="width: 50%;height: 50%; border-radius: 50%" src="http://i4.buimg.com/bcbe90068148b736.jpg" alt=""></a>	
+	  	<p style="font-size: 1.5em;color:rgb(140,187,193);text-indent:2em;">李国平</p> 
+	</div>
+</aside>
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Music</h3>
+    <div class="widget-content">
+      <audio src="http://so1.111ttt.com:8282/2015/1/03m/22/96221801351.m4a?tflag=1463151342&amp;pin=ba0fcaeba2ae9fe3fa16af670d3a5210&amp;ip=101.95.141.6#.mp3" controls="controls" loop="loop"
+             style="width:100%">
+        您的浏览器不支持 audio 标签。
+      </audio>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2016/05/17/jade的使用-二/">jade的使用(二)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/17/jade的使用/">jade的使用(一)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/16/gulp构建工具/">gulp构建工具</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/14/居中/">居中</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/12/伪元素/">伪元素</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-content tagcloud">
+      <a href="/tags/git仓库/" style="font-size: 10px;">git仓库</a> <a href="/tags/hexo博客/" style="font-size: 10px;">hexo博客</a> <a href="/tags/jade的使用/" style="font-size: 10px;">jade的使用</a> <a href="/tags/js代码压缩-css代码压缩-html代码压缩/" style="font-size: 10px;">js代码压缩 css代码压缩 html代码压缩</a> <a href="/tags/nodejs思维导图-git思维导图/" style="font-size: 10px;">nodejs思维导图 git思维导图</a> <a href="/tags/伪元素-伪类/" style="font-size: 10px;">伪元素 伪类</a> <a href="/tags/水平居中-垂直居中/" style="font-size: 10px;">水平居中 垂直居中</a>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li class='link'><a href='http://ahz549467483.github.io'>码猿之家</a></li>
+        
+          <li class='link'><a href='http://kangyuf.github.io/'>小康的博客</a></li>
+        
+          <li class='link'><a href='http://wangjing991.github.io/'>Jimwan</a></li>
+        
+          <li class='link'><a href='http://liushengguang.github.io/'>阳光与你同在</a></li>
+        
+          <li class='link'><a href='http://wangbin5614.github.io/'>细流</a></li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2016 Apple Pear
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
