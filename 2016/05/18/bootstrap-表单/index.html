@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="无聊之作" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>bootstrap-表单 | 苹果与梨的世界</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="bootstrap对表单元素的修改对于基础表单，Bootstrap并未对其做太多的定制性效果设计，仅仅对表单内的fieldset、legend、label标签进行了定制；主要将这些元素的margin、padding和border等进行了细化设置。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="bootstrap-表单">
+<meta property="og:url" content="http://yoursite.com/2016/05/18/bootstrap-表单/index.html">
+<meta property="og:site_name" content="苹果与梨的世界">
+<meta property="og:description" content="bootstrap对表单元素的修改对于基础表单，Bootstrap并未对其做太多的定制性效果设计，仅仅对表单内的fieldset、legend、label标签进行了定制；主要将这些元素的margin、padding和border等进行了细化设置。">
+<meta property="og:image" content="http://i4.buimg.com/37185f4dd6fbcfd9.png">
+<meta property="og:updated_time" content="2016-05-18T13:19:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="bootstrap-表单">
+<meta name="twitter:description" content="bootstrap对表单元素的修改对于基础表单，Bootstrap并未对其做太多的定制性效果设计，仅仅对表单内的fieldset、legend、label标签进行了定制；主要将这些元素的margin、padding和border等进行了细化设置。">
+<meta name="twitter:image" content="http://i4.buimg.com/37185f4dd6fbcfd9.png">
+  
+    <link rel="alternative" href="http://lanfeng-lgp.github.io/" title="苹果与梨的世界" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://www.rzhf.com/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="苹果与梨的世界" rel="home">苹果与梨的世界</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">“欢迎各路水果蔬菜分享讨论”--来自苹果梨的愿望</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-bootstrap-表单" class="post-bootstrap-表单 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      bootstrap-表单
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="/2016/05/18/bootstrap-表单/#comments" class="leave-reply">评论</a>
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/05/18/bootstrap-表单/" data-id="ciocrrbdo0002m3jtzyk42mml" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h2 id="bootstrap对表单元素的修改"><a href="#bootstrap对表单元素的修改" class="headerlink" title="bootstrap对表单元素的修改"></a>bootstrap对表单元素的修改</h2><p>对于基础表单，Bootstrap并未对其做太多的定制性效果设计，仅仅对表单内的fieldset、legend、label标签进行了定制；主要将这些元素的margin、padding和border等进行了细化设置。<br><a id="more"></a></p>
+<h3 id="基础表单样式"><a href="#基础表单样式" class="headerlink" title="基础表单样式"></a>基础表单样式</h3><pre><code>(1)form-control 类名  #在input、select、textarea等元素中设置
+    宽度变成了100%
+    设置了一个浅灰色（#ccc）的边框，具有6px的圆角
+    设置阴影效果，并且元素得到焦点之时，阴影和边框效果会有所变化
+    设置了placeholder的颜色为#999
+(2)role 属性  #在form中设置
+    role=“form”        #告诉辅助设备（如屏幕阅读器）这个元素所扮演的角色是个表单
+    role=“button”        #告诉设备，这是个按钮，可以点击        本质上是增强语义性，增强组件的可访问性、可用性
+(3)form-group  类名
+    就是一个产生margin-bottom:15px的效果
+</code></pre><h3 id="input样式"><a href="#input样式" class="headerlink" title="input样式"></a>input样式</h3><pre><code>（1）必须带有type，多使用form-control类（效果见上）
+        input-sm:让控件比正常大小更小
+        input-lg:让控件比正常大小更大
+        不设置就是正常大小
+（2）禁用属性：disabled
+（3）默认内容属性： placeholder
+</code></pre><h3 id="select样式"><a href="#select样式" class="headerlink" title="select样式"></a>select样式</h3><pre><code>(1)默认选择一个选项，多使用form-control（效果见上）
+(2)多行选择的话 设置multiple属性
+        &lt;select multiple class=“form-control”&gt; 
+</code></pre><h3 id="textarea样式"><a href="#textarea样式" class="headerlink" title="textarea样式"></a>textarea样式</h3><pre><code>(1)设置rows=&quot;number&quot;规定文本区域的高度（以行数计）
+(2)设置cols=    &quot;number&quot;    规定文本区域的宽度（以平均字符宽度计）。默认值是20。
+(3)如果textarea元素中添加了类名“form-control”类名，则无需设置cols属性
+</code></pre><h3 id="单选框、多选框样式"><a href="#单选框、多选框样式" class="headerlink" title="单选框、多选框样式"></a>单选框、多选框样式</h3><pre><code>控件与文字对齐问题：
+（1）如果checkbox需要水平排列，只需要在label标签上添加类名“checkbox-inline”
+（2）如果radio需要水平排列，只需要在label标签上添加类名“radio-inline
+</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=“checkbox”&gt;		<span class="comment">#书写格式</span></span><br><span class="line">    &lt;label&gt;</span><br><span class="line">      &lt;input <span class="built_in">type</span>=“checkbox” value=“”&gt;记住密码</span><br><span class="line">    &lt;/label&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="按钮样式"><a href="#按钮样式" class="headerlink" title="按钮样式"></a>按钮样式</h3><h4 id="1-按钮的基础类名"><a href="#1-按钮的基础类名" class="headerlink" title="1.按钮的基础类名"></a>1.按钮的基础类名</h4><pre><code>(1)Bootstrap框架首先通过基础类名“.btn”定义了一个基础的按钮风格
+        然后通过“.btn-default”定义了一个默认的按钮风格。
+(2)默认按钮的风格就是在基础按钮的风格的基础上修改了按钮的背景颜色、边框颜色和文本颜色。
+(3)在Bootstrap框架中的按钮都是采用\&lt;button\&gt;来实现
+(4).btn类还支持a标签，type-submit的input标签
+格式：    
+&lt;button class=“btn btn-default” type=“button”&gt;默认按钮&lt;/button
+</code></pre><h4 id="2-按钮的扩展类名"><a href="#2-按钮的扩展类名" class="headerlink" title="2.按钮的扩展类名"></a>2.按钮的扩展类名</h4><pre><code>（1）颜色等改变
+    btn-primary：    主要按钮
+    btn-success：    成功按钮
+    btn-warning：    警告按钮
+    btn-danger：    危险按钮
+    btn-link：    链接按钮
+</code></pre><p><img src="http://i4.buimg.com/37185f4dd6fbcfd9.png" alt=""></p>
+<pre><code>（2）大小改变
+    bth-lg：大型按钮
+    btn-sm：    小型按钮
+    btn-xs：    超小型按钮    
+    btn-block：块状按钮 #转换为了块标签
+</code></pre><h3 id="表单类别"><a href="#表单类别" class="headerlink" title="表单类别"></a>表单类别</h3><pre><code>（1）水平表单
+    在Bootstrap框架中要实现水平表单效果，必须满足以下两个条件
+    1.在&lt;form&gt;元素是使用类名“form-horizontal”
+    2.配合Bootstrap框架的网格系统。（网格布局会在以后的章节中详细讲解）
+（2）内联表单    
+    只需要在&lt;form&gt;元素中添加类名“form-inline”即可
+（3）label标签会导致input换行显示，解决方案就是给label添加一个类名“sr-only”，标签将隐藏。
+</code></pre><p>如果没有为输入控件设置label标签，屏幕阅读器将无法正确识别。这也是Bootstrap框架另一个优点之处，为残障人员进行了一定的考虑。</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2016/05/18/bootstrap-表单/">
+    <time datetime="2016-05-18T11:11:28.000Z" class="entry-date">
+        2016-05-18
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bootstrap表单/">bootstrap表单</a></li></ul>
+
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2016/05/18/bootstrap-图/" rel="prev"><span class="meta-nav">←</span> bootstrap-图</a></span>
+    
+    
+        <span class="nav-next"><a href="/2016/05/18/bootstrap-表格/" rel="next">bootstrap-表格 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+<section id="comments">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-bootstrap-表单" data-title="bootstrap-表单" data-url="http://yoursite.com/2016/05/18/bootstrap-表单/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:'true'};
+    (function() {
+	  var ds = document.createElement('script');
+	  ds.type = 'text/javascript';ds.async = true;
+	  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	  ds.charset = 'UTF-8';
+	  (document.getElementsByTagName('head')[0]
+	   || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+  <!-- 多说公共JS代码 end -->
+</section>
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    <aside class="widget">
+	<h3 class="widget-title">作者信息</h3>
+	<div class="widget-content">
+		<a href="http://user.qzone.qq.com/1739059814/" text-align: center;><img style="width: 50%;height: 50%; border-radius: 50%" src="http://i4.buimg.com/bcbe90068148b736.jpg" alt=""></a>	
+	  	<p style="font-size: 1.5em;color:rgb(140,187,193);text-indent:2em;">李国平</p> 
+	</div>
+</aside>
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Music</h3>
+    <div class="widget-content">
+      <audio src="http://so1.111ttt.com:8282/2015/1/03m/22/96221801351.m4a?tflag=1463151342&amp;pin=ba0fcaeba2ae9fe3fa16af670d3a5210&amp;ip=101.95.141.6#.mp3" controls="controls" loop="loop"
+             style="width:100%">
+        您的浏览器不支持 audio 标签。
+      </audio>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2016/05/18/bootstrap-网格/">bootstrap-网格</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/18/bootstrap-图/">bootstrap-图</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/18/bootstrap-表单/">bootstrap-表单</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/18/bootstrap-表格/">bootstrap-表格</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/18/bootstrap基础/">bootstrap基础</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-content tagcloud">
+      <a href="/tags/Bootstrap简介-Bootstrap基础/" style="font-size: 10px;">Bootstrap简介 Bootstrap基础</a> <a href="/tags/bootstrap图片-bootstrap图标/" style="font-size: 10px;">bootstrap图片 bootstrap图标</a> <a href="/tags/bootstrap网格/" style="font-size: 10px;">bootstrap网格</a> <a href="/tags/bootstrap表单/" style="font-size: 10px;">bootstrap表单</a> <a href="/tags/bootstrap表格/" style="font-size: 10px;">bootstrap表格</a> <a href="/tags/git仓库/" style="font-size: 10px;">git仓库</a> <a href="/tags/hexo博客/" style="font-size: 10px;">hexo博客</a> <a href="/tags/jade的使用/" style="font-size: 10px;">jade的使用</a> <a href="/tags/js代码压缩-css代码压缩-html代码压缩/" style="font-size: 10px;">js代码压缩 css代码压缩 html代码压缩</a> <a href="/tags/nodejs思维导图-git思维导图/" style="font-size: 10px;">nodejs思维导图 git思维导图</a> <a href="/tags/伪元素-伪类/" style="font-size: 10px;">伪元素 伪类</a> <a href="/tags/水平居中-垂直居中/" style="font-size: 10px;">水平居中 垂直居中</a>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li class='link'><a href='http://ahz549467483.github.io'>码猿之家</a></li>
+        
+          <li class='link'><a href='http://kangyuf.github.io/'>小康的博客</a></li>
+        
+          <li class='link'><a href='http://wangjing991.github.io/'>Jimwan</a></li>
+        
+          <li class='link'><a href='http://liushengguang.github.io/'>阳光与你同在</a></li>
+        
+          <li class='link'><a href='http://wangbin5614.github.io/'>细流</a></li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2016 Apple Pear
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

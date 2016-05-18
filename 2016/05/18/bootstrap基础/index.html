@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="无聊之作" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>bootstrap基础 | 苹果与梨的世界</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Bootstrap 简介Bootstrap 是 HTML、CSS 和 JS 框架，用于开发响应式布局、移动设备优先的 WEB 项目。TA是完全开源的。它的代码托管、开发、维护都依赖 GitHub 平台。Bootstrap中文网">
+<meta property="og:type" content="article">
+<meta property="og:title" content="bootstrap基础">
+<meta property="og:url" content="http://yoursite.com/2016/05/18/bootstrap基础/index.html">
+<meta property="og:site_name" content="苹果与梨的世界">
+<meta property="og:description" content="Bootstrap 简介Bootstrap 是 HTML、CSS 和 JS 框架，用于开发响应式布局、移动设备优先的 WEB 项目。TA是完全开源的。它的代码托管、开发、维护都依赖 GitHub 平台。Bootstrap中文网">
+<meta property="og:updated_time" content="2016-05-18T12:41:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="bootstrap基础">
+<meta name="twitter:description" content="Bootstrap 简介Bootstrap 是 HTML、CSS 和 JS 框架，用于开发响应式布局、移动设备优先的 WEB 项目。TA是完全开源的。它的代码托管、开发、维护都依赖 GitHub 平台。Bootstrap中文网">
+  
+    <link rel="alternative" href="http://lanfeng-lgp.github.io/" title="苹果与梨的世界" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://www.rzhf.com/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="苹果与梨的世界" rel="home">苹果与梨的世界</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">“欢迎各路水果蔬菜分享讨论”--来自苹果梨的愿望</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-bootstrap基础" class="post-bootstrap基础 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      bootstrap基础
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="/2016/05/18/bootstrap基础/#comments" class="leave-reply">评论</a>
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/05/18/bootstrap基础/" data-id="ciocrrbds0004m3jtidsu0vid" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h2 id="Bootstrap-简介"><a href="#Bootstrap-简介" class="headerlink" title="Bootstrap 简介"></a>Bootstrap 简介</h2><p>Bootstrap 是 HTML、CSS 和 JS 框架，用于开发响应式布局、移动设备优先的 WEB 项目。<br>TA是完全开源的。它的代码托管、开发、维护都依赖 <a href="https://github.com/" target="_blank" rel="external">GitHub</a> 平台。<br><a href="http://v3.bootcss.com/" target="_blank" rel="external">Bootstrap中文网</a><br><a id="more"></a></p>
+<h2 id="Bootstrap-导入"><a href="#Bootstrap-导入" class="headerlink" title="Bootstrap 导入"></a>Bootstrap 导入</h2><p>使用 Bootstrap 提供的免费 CDN 加速服务（同时支持 http 和 https 协议,也就是文件地址http:// 或者 https://）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 新 Bootstrap 核心 CSS 文件 --&gt;</span><br><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"</span>&gt;</span><br><span class="line">&lt;!-- 可选的Bootstrap主题文件（一般不用引入） --&gt;</span><br><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"</span>&gt;</span><br><span class="line">&lt;!-- jQuery文件。务必在bootstrap.min.js 之前引入 --&gt;</span><br><span class="line">&lt;script src=<span class="string">"//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;!-- 最新的 Bootstrap 核心 JavaScript 文件 --&gt;</span><br><span class="line">&lt;script src=<span class="string">"//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>注意：以下3个meta标签<em>必须</em>放在head最前面，任何其他内容都<em>必须</em>跟随其后<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">&lt;meta http-equiv=<span class="string">"X-UA-Compatible"</span> content=<span class="string">"IE=edge"</span>&gt;   <span class="comment">#系统如果安装ie8或以上版本，则使用最高版本ie渲染</span></span><br><span class="line">&lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width, initial-scale=1"</span>&gt;   <span class="comment">#手机适配设置</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Bootstrap-基础"><a href="#Bootstrap-基础" class="headerlink" title="Bootstrap 基础"></a>Bootstrap 基础</h2><h3 id="1-全局样式"><a href="#1-全局样式" class="headerlink" title="1.全局样式"></a>1.全局样式</h3><pre><code>移除body的margin声明
+设置body的背景色为白色
+为排版设置了基本的字体、字号和行高,颜色
+设置全局链接颜色，且当链接处于悬浮“:hover”状态时才会显示下划线样式
+</code></pre><h3 id="2-标题样式"><a href="#2-标题样式" class="headerlink" title="2.标题样式"></a>2.标题样式</h3><pre><code>(1)重置了h1~h6的默认样式
+    重新设置了margin-top和margin-bottom的值，h1~h3重置后的值都是20px；h4~h6重置后的值都是10px
+    所有标题的行高都是1.1（也就是font-size的1.1倍）
+    文本颜色和字体都继承父元素的颜色和字体
+    固定不同级别标题字体大小h1=36px、h2=30px、h3=24px、h4=18px、h5=14px、h6=12px
+(2)标题类名：设置了名为 h1~h6 的类名，css样式与h1~h6一样；
+    &lt;div class=&quot;h1&quot;&gt;Bootstrap标题&lt;/div&gt;
+(3)副标题 small 在h*标签或含h*类名的标签内使用：
+    &lt;h1&gt;Bootstrap标题一&lt;small&gt;我是副标题&lt;/small&gt;&lt;/h1&gt;
+</code></pre><h3 id="3-强调样式"><a href="#3-强调样式" class="headerlink" title="3.强调样式"></a>3.强调样式</h3><pre><code>(1)强调标签        
+    &lt;small&gt;   #变小
+    &lt;strong&gt; &lt;b&gt;    #加粗
+    &lt;em&gt; &lt;i&gt;    #斜体
+    &lt;cite&gt;
+(2)强调使用的类名
+    lead：一般配合段落标签使用 使其强调效果 （加粗，margib-bootom=20px,···)
+    text-muted：提示，使用浅灰色（#999）
+    text-primary：主要，使用蓝色（#428bca）
+    text-success：成功，使用浅绿色(#3c763d)
+    text-info：通知信息，使用浅蓝色（#31708f）
+    text-warning：警告，使用黄色（#8a6d3b）
+    text-danger：危险，使用褐色（#a94442）
+</code></pre><h3 id="4-对齐样式"><a href="#4-对齐样式" class="headerlink" title="4.对齐样式"></a>4.对齐样式</h3><pre><code>对齐使用的类名
+    text-left：左对齐
+    text-center：居中对齐
+    text-right：右对齐
+    text-justify：两端对齐
+</code></pre><h3 id="5-列表样式"><a href="#5-列表样式" class="headerlink" title="5.列表样式"></a>5.列表样式</h3><pre><code>列表使用的类名    
+    list-unstyled：    ul ol，去序列
+    list-inline：ul ol 水平列表
+        把垂直列表换成水平列表，而且去掉项目符号（编号），保持水平显示
+    dl-horizontal：dl 水平列表
+        屏幕大于768px的时候，添加类名“.dl-horizontal”才具有水平定义列表效果
+</code></pre><h3 id="6-代码样式"><a href="#6-代码样式" class="headerlink" title="6.代码样式"></a>6.代码样式</h3><pre><code>&lt;code&gt;        一般是针对于单个单词或单个句子的代码
+&lt;pre&gt;        一般是针对于多行代码（也就是成块的代码）
+pre-scrollable        pre标签上添加的类名
+    可以控制代码块区域最大高度为340px，一旦超出这个高度，就会在Y轴出现滚动条。
+</code></pre><p>注意：不管使用哪种代码风格，在代码中碰到小于号（&lt;）要使用硬编码”&amp; lt;”来替代，大于号(&gt;)使用”&amp; gt;”来替代</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2016/05/18/bootstrap基础/">
+    <time datetime="2016-05-18T11:10:37.000Z" class="entry-date">
+        2016-05-18
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bootstrap简介-Bootstrap基础/">Bootstrap简介 Bootstrap基础</a></li></ul>
+
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2016/05/18/bootstrap-表格/" rel="prev"><span class="meta-nav">←</span> bootstrap-表格</a></span>
+    
+    
+        <span class="nav-next"><a href="/2016/05/17/jade的使用-二/" rel="next">jade的使用(二) <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+<section id="comments">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-bootstrap基础" data-title="bootstrap基础" data-url="http://yoursite.com/2016/05/18/bootstrap基础/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:'true'};
+    (function() {
+	  var ds = document.createElement('script');
+	  ds.type = 'text/javascript';ds.async = true;
+	  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	  ds.charset = 'UTF-8';
+	  (document.getElementsByTagName('head')[0]
+	   || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+  <!-- 多说公共JS代码 end -->
+</section>
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    <aside class="widget">
+	<h3 class="widget-title">作者信息</h3>
+	<div class="widget-content">
+		<a href="http://user.qzone.qq.com/1739059814/" text-align: center;><img style="width: 50%;height: 50%; border-radius: 50%" src="http://i4.buimg.com/bcbe90068148b736.jpg" alt=""></a>	
+	  	<p style="font-size: 1.5em;color:rgb(140,187,193);text-indent:2em;">李国平</p> 
+	</div>
+</aside>
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Music</h3>
+    <div class="widget-content">
+      <audio src="http://so1.111ttt.com:8282/2015/1/03m/22/96221801351.m4a?tflag=1463151342&amp;pin=ba0fcaeba2ae9fe3fa16af670d3a5210&amp;ip=101.95.141.6#.mp3" controls="controls" loop="loop"
+             style="width:100%">
+        您的浏览器不支持 audio 标签。
+      </audio>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2016/05/18/bootstrap-网格/">bootstrap-网格</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/18/bootstrap-图/">bootstrap-图</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/18/bootstrap-表单/">bootstrap-表单</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/18/bootstrap-表格/">bootstrap-表格</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/18/bootstrap基础/">bootstrap基础</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-content tagcloud">
+      <a href="/tags/Bootstrap简介-Bootstrap基础/" style="font-size: 10px;">Bootstrap简介 Bootstrap基础</a> <a href="/tags/bootstrap图片-bootstrap图标/" style="font-size: 10px;">bootstrap图片 bootstrap图标</a> <a href="/tags/bootstrap网格/" style="font-size: 10px;">bootstrap网格</a> <a href="/tags/bootstrap表单/" style="font-size: 10px;">bootstrap表单</a> <a href="/tags/bootstrap表格/" style="font-size: 10px;">bootstrap表格</a> <a href="/tags/git仓库/" style="font-size: 10px;">git仓库</a> <a href="/tags/hexo博客/" style="font-size: 10px;">hexo博客</a> <a href="/tags/jade的使用/" style="font-size: 10px;">jade的使用</a> <a href="/tags/js代码压缩-css代码压缩-html代码压缩/" style="font-size: 10px;">js代码压缩 css代码压缩 html代码压缩</a> <a href="/tags/nodejs思维导图-git思维导图/" style="font-size: 10px;">nodejs思维导图 git思维导图</a> <a href="/tags/伪元素-伪类/" style="font-size: 10px;">伪元素 伪类</a> <a href="/tags/水平居中-垂直居中/" style="font-size: 10px;">水平居中 垂直居中</a>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li class='link'><a href='http://ahz549467483.github.io'>码猿之家</a></li>
+        
+          <li class='link'><a href='http://kangyuf.github.io/'>小康的博客</a></li>
+        
+          <li class='link'><a href='http://wangjing991.github.io/'>Jimwan</a></li>
+        
+          <li class='link'><a href='http://liushengguang.github.io/'>阳光与你同在</a></li>
+        
+          <li class='link'><a href='http://wangbin5614.github.io/'>细流</a></li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2016 Apple Pear
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
