@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/05/18/bootstrap-网格/index.html">
 <meta property="og:site_name" content="苹果与梨的世界">
 <meta property="og:description" content="实现原理网格系统的实现原理非常简单，仅仅是通过定义容器大小，平分12份(也有平分成24份或32份，但12份是最常见的)，再调整内外边距，最后结合媒体查询，就制作出了强大的响应式网格系统。Bootstrap框架中的网格系统就是将容器平分成12份。">
-<meta property="og:updated_time" content="2016-05-18T14:00:22.000Z">
+<meta property="og:updated_time" content="2016-05-19T02:38:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="bootstrap-网格">
 <meta name="twitter:description" content="实现原理网格系统的实现原理非常简单，仅仅是通过定义容器大小，平分12份(也有平分成24份或32份，但12份是最常见的)，再调整内外边距，最后结合媒体查询，就制作出了强大的响应式网格系统。Bootstrap框架中的网格系统就是将容器平分成12份。">
@@ -84,22 +84,22 @@
             
             <a href="/2016/05/18/bootstrap-网格/#comments" class="leave-reply">评论</a>
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/05/18/bootstrap-网格/" data-id="ciocynpid000118jtd353ixe2" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/05/18/bootstrap-网格/" data-id="ciodp4rla0001majtzr2squha" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
     <div class="entry-content">
       
         <h2 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h2><p><span style="font-size:11px;color:#555;"><br>网格系统的实现原理非常简单，仅仅是通过定义容器大小，平分12份(也有平分成24份或32份，但12份是最常见的)，再调整内外边距，最后结合媒体查询，就制作出了强大的响应式网格系统。Bootstrap框架中的网格系统就是将容器平分成12份。<br></span><br><a id="more"></a></p>
-<h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><p><span style="font-size:11px;color:#555;"><br>数据行(.row)必须包含在容器（.container）中，以便为其赋予合适的对齐方式和内距(padding)；<br>在行(.row)中可以添加列(.column)，但列数之和不能超过平分的总列数，比如12。<br></span></p>
+<h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><p><span style="font-size:11px;color:#555;"><br>(1)数据行(.row)必须包含在容器（.container）中，以便为其赋予合适的对齐方式和内距(padding)；<br>(2)在行(.row)中可以添加列(.column)，但列数之和不能超过平分的总列数，比如12。<br></span></p>
 <pre><code>&lt;div class=“container”&gt;
     &lt;div class=“row”&gt;
         &lt;div class=“col-md-4”&gt;&lt;/div&gt;
         &lt;div class=“col-md-8”&gt;&lt;/div&gt;
         &lt;/div&gt;
 &lt;/div&gt;
-</code></pre><p><span style="font-size:11px;color:#555;"><br>具体内容应当放置在列容器（column）之内，而且只有列（column）才可以作为行容器(.row)的直接子元素。<br>通过设置内距（padding）从而创建列与列之间的间距。然后通过为第一列和最后一列设置负值的外距（margin）来抵消内距(padding)的影响。<br></span></p>
-
+</code></pre><p><span style="font-size:11px;color:#555;"><br>(3)具体内容应当放置在列容器（column）之内，而且只有列（column）才可以作为行容器(.row)的直接子元素。<br>(4)通过设置内距（padding）从而创建列与列之间的间距。然后通过为第一列和最后一列设置负值的外距（margin）来抵消内距(padding)的影响。<br>(5)针对不同的浏览器分辨率,其宽度也不一样：自动、750px、970px和1170px<br>    col-xs-1, .col-sm-1, .col-md-1, .col-lg-1<br>    都以中屏（970px）为例 col-md<br></span></p>
+<h2 id="列偏移"><a href="#列偏移" class="headerlink" title="列偏移"></a>列偏移</h2>
       
     </div><!-- .entry-content -->
 
