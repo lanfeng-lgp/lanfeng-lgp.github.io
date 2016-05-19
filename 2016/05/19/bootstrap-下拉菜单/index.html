@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="无聊之作" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>bootstrap-下拉菜单 | 苹果与梨的世界</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="在使用Bootstrap框架中的下拉菜单组件时，其结构运用的正确与否非常的重要，如果结构和类名未使用正确，直接影响组件是否能正常运用
+使用方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="bootstrap-下拉菜单">
+<meta property="og:url" content="http://yoursite.com/2016/05/19/bootstrap-下拉菜单/index.html">
+<meta property="og:site_name" content="苹果与梨的世界">
+<meta property="og:description" content="在使用Bootstrap框架中的下拉菜单组件时，其结构运用的正确与否非常的重要，如果结构和类名未使用正确，直接影响组件是否能正常运用
+使用方法">
+<meta property="og:image" content="http://i2.buimg.com/8b6fac645b9e1f10.png">
+<meta property="og:image" content="http://i2.buimg.com/ece77e2473412cfd.png">
+<meta property="og:image" content="http://i2.buimg.com/08cee47dc2f3af24.png">
+<meta property="og:image" content="http://i2.buimg.com/ad95092472af4386.png">
+<meta property="og:updated_time" content="2016-05-19T06:50:29.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="bootstrap-下拉菜单">
+<meta name="twitter:description" content="在使用Bootstrap框架中的下拉菜单组件时，其结构运用的正确与否非常的重要，如果结构和类名未使用正确，直接影响组件是否能正常运用
+使用方法">
+<meta name="twitter:image" content="http://i2.buimg.com/8b6fac645b9e1f10.png">
+  
+    <link rel="alternative" href="http://lanfeng-lgp.github.io/" title="苹果与梨的世界" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://www.rzhf.com/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="苹果与梨的世界" rel="home">苹果与梨的世界</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">“欢迎各路水果蔬菜分享讨论”--来自苹果梨的愿望</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-bootstrap-下拉菜单" class="post-bootstrap-下拉菜单 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      bootstrap-下拉菜单
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="/2016/05/19/bootstrap-下拉菜单/#comments" class="leave-reply">评论</a>
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/05/19/bootstrap-下拉菜单/" data-id="ciodxxvzb0000w9jtw9v72hrx" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>在使用Bootstrap框架中的下拉菜单组件时，其结构运用的正确与否非常的重要，如果结构和类名未使用正确，直接影响组件是否能正常运用</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><a id="more"></a>
+<p><span style="font-size:11px;color:#555;"><br>（1）使用一个名为“dropdown”的容器包裹了整个下拉菜单元素<br>（2）使用了一个\<button\>按钮做为父菜单，并且定义类名“dropdown-toggle”和自定义“data-toggle”属性，且值必须和最外容器类名一致;<br>（3）在button标签内可以添加一个类名为 caret 的span标签，效果是会在button中添加一小三角；<br>（4）下拉菜单项使用一个ul列表，并且定义一个类名为“dropdown-menu”；<br>（5）Bootstrap框架中下拉菜单默认是左对齐，如果你想让下拉菜单相对于父容器右对齐时，可以在“dropdown-menu”上添加一个“dropdown-menu-right”类名。<br></button\></span><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=“dropdown”&gt;</span><br><span class="line">  &lt;button class=“btn btn-default dropdown-toggle” data-toggle=“dropdown”&gt;下拉菜单</span><br><span class="line">   	&lt;span class=“caret”&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/button&gt;</span><br><span class="line">  &lt;ul class=“dropdown-menu”&gt;</span><br><span class="line">      &lt;li&gt;&lt;a href=“<span class="comment">##”&gt;按钮下拉菜单项&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line">      &lt;li&gt;&lt;a href=“<span class="comment">##”&gt;按钮下拉菜单项&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="按钮下拉菜单"><a href="#按钮下拉菜单" class="headerlink" title="按钮下拉菜单"></a>按钮下拉菜单</h2><p><span style="font-size:11px;color:#555;"><br>按钮下拉菜单仅从外观上看和下拉菜单效果基本上是一样的。不同的是在普通的下拉菜单的基础上封装了按钮（.btn）样式效果。简单点说就是点击一个按钮，会显示隐藏的下拉菜单。<br>按钮下拉菜单其实就是普通的下拉菜单，只不过把“&lt;a&gt;”标签元素换成了“&lt;button&gt;”标签元素。唯一不同的是外部容器“div.dropdown”换成了“div.btn-group”<br><br><span style="font-size:11px;color:#555;"><br>有的时候我们的下拉菜单会向上弹起，这个时候我们的三角方向需要朝上显示；<br>实现方法：需要在“.btn-group”类上追加“dropup”类名（这也是做向上弹起下拉菜单要用的类名）。<br></span></span></p>
+<h2 id="菜单的细节修改"><a href="#菜单的细节修改" class="headerlink" title="菜单的细节修改"></a>菜单的细节修改</h2><h3 id="1-下拉分隔线"><a href="#1-下拉分隔线" class="headerlink" title="1.下拉分隔线"></a>1.下拉分隔线</h3><p><span style="font-size:11px;color:#555;"><br>在Bootstrap框架中的下拉菜单还提供了下拉分隔线，假设下拉菜单有两个组，那么组与组之间可以通过添加一个空的&lt;li&gt;，并且给这个&lt;li&gt;添加类名“divider”来实现添加下拉分隔线的功能；<br><img src="http://i2.buimg.com/8b6fac645b9e1f10.png" style="width:35%"><br>通过添加“divider”可以将下拉菜单分组，为了让这个分组更明显，还可以给每个组添加一个头部（标题）<br>    给li添加dropdown-header类<br><img src="http://i2.buimg.com/ece77e2473412cfd.png" style="width:20%"><br></span></p>
+<h3 id="2-下拉菜单的状态"><a href="#2-下拉菜单的状态" class="headerlink" title="2.下拉菜单的状态"></a>2.下拉菜单的状态</h3><pre><code>li添加.active
+li添加.disabled    
+</code></pre><p><img src="http://i2.buimg.com/08cee47dc2f3af24.png" style="width:35%"></p>
+<h2 id="导航菜单的效果"><a href="#导航菜单的效果" class="headerlink" title="导航菜单的效果"></a>导航菜单的效果</h2><p>使用的时候，只需要把当初制作下拉菜单的“dropdown”的容器换成“btn-group”，并且和普通的按钮放在同一级<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=“ban-group”&gt;</span><br><span class="line">&lt;button class=“btnbtn-default” <span class="built_in">type</span>=“button”&gt;首页&lt;/button&gt;</span><br><span class="line">&lt;button class=“btnbtn-default” <span class="built_in">type</span>=“button”&gt;产品展示&lt;/button&gt;</span><br><span class="line">&lt;button class=“btnbtn-default” <span class="built_in">type</span>=“button”&gt;案例分析&lt;/button&gt;</span><br><span class="line">&lt;button class=“btnbtn-default” <span class="built_in">type</span>=“button”&gt;联系我们&lt;/button&gt;</span><br><span class="line">&lt;div class=“ban-group”&gt;</span><br><span class="line">   &lt;button class=“btnbtn-default dropdown-toggle” data-toggle=“dropdown” <span class="built_in">type</span>=“button”&gt;关于我们&lt;span class=“caret”&gt;&lt;/span&gt;&lt;/button&gt;</span><br><span class="line">   &lt;ul class=“dropdown-menu”&gt;</span><br><span class="line">         &lt;li&gt;&lt;a href=“<span class="comment">##”&gt;公司简介&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line">         &lt;li&gt;&lt;a href=“<span class="comment">##”&gt;企业文化&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line">         &lt;li&gt;&lt;a href=“<span class="comment">##”&gt;组织结构&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line">         &lt;li&gt;&lt;a href=“<span class="comment">##”&gt;客服服务&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://i2.buimg.com/ad95092472af4386.png" style="width:50%"></p>
+<h2 id="菜单样式"><a href="#菜单样式" class="headerlink" title="菜单样式"></a>菜单样式</h2><p><span style="font-size:11px;color:#555;"><br>btn-group-vertical<br>     垂直分组：把水平分组的“ban-group”类名换成“ban-group-vertical”即可<br>btn-group-justifie<br>     等分按钮也常被称为是自适应分组按钮，实现方法就是在按钮组“btn-group”上追加一个“btn-group-justified”类名<br>注意：每组按钮都要加上btn-group的类<br></span></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2016/05/19/bootstrap-下拉菜单/">
+    <time datetime="2016-05-19T06:08:45.000Z" class="entry-date">
+        2016-05-19
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bootstrap-下拉菜单/">bootstrap-下拉菜单</a></li></ul>
+
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2016/05/19/bootstrap-导航/" rel="prev"><span class="meta-nav">←</span> bootstrap-导航</a></span>
+    
+    
+        <span class="nav-next"><a href="/2016/05/18/bootstrap-网格/" rel="next">bootstrap-网格 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+<section id="comments">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-bootstrap-下拉菜单" data-title="bootstrap-下拉菜单" data-url="http://yoursite.com/2016/05/19/bootstrap-下拉菜单/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:'true'};
+    (function() {
+	  var ds = document.createElement('script');
+	  ds.type = 'text/javascript';ds.async = true;
+	  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	  ds.charset = 'UTF-8';
+	  (document.getElementsByTagName('head')[0]
+	   || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+  <!-- 多说公共JS代码 end -->
+</section>
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    <aside class="widget">
+	<h3 class="widget-title">作者信息</h3>
+	<div class="widget-content">
+		<a href="http://user.qzone.qq.com/1739059814/" text-align: center;><img style="width: 50%;height: 50%; border-radius: 50%" src="http://i4.buimg.com/bcbe90068148b736.jpg" alt=""></a>	
+	  	<p style="font-size: 1.5em;color:rgb(140,187,193);text-indent:2em;">李国平</p> 
+	</div>
+</aside>
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Music</h3>
+    <div class="widget-content">
+      <audio src="http://so1.111ttt.com:8282/2015/1/03m/22/96221801351.m4a?tflag=1463151342&amp;pin=ba0fcaeba2ae9fe3fa16af670d3a5210&amp;ip=101.95.141.6#.mp3" controls="controls" loop="loop"
+             style="width:100%">
+        您的浏览器不支持 audio 标签。
+      </audio>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2016/05/19/bootstrap-导航/">bootstrap-导航</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/19/bootstrap-下拉菜单/">bootstrap-下拉菜单</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/18/bootstrap-网格/">bootstrap-网格</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/18/bootstrap-图/">bootstrap-图</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/18/bootstrap-表单/">bootstrap-表单</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-content tagcloud">
+      <a href="/tags/Bootstrap简介-Bootstrap基础/" style="font-size: 10px;">Bootstrap简介 Bootstrap基础</a> <a href="/tags/bootstrap-下拉菜单/" style="font-size: 10px;">bootstrap-下拉菜单</a> <a href="/tags/bootstrap-导航-选项卡导航/" style="font-size: 10px;">bootstrap-导航 选项卡导航</a> <a href="/tags/bootstrap图片-bootstrap图标/" style="font-size: 10px;">bootstrap图片 bootstrap图标</a> <a href="/tags/bootstrap网格-网格-列偏移-列排序/" style="font-size: 10px;">bootstrap网格 网格 列偏移 列排序</a> <a href="/tags/bootstrap表单/" style="font-size: 10px;">bootstrap表单</a> <a href="/tags/bootstrap表格/" style="font-size: 10px;">bootstrap表格</a> <a href="/tags/git仓库/" style="font-size: 10px;">git仓库</a> <a href="/tags/hexo博客/" style="font-size: 10px;">hexo博客</a> <a href="/tags/jade的使用/" style="font-size: 10px;">jade的使用</a> <a href="/tags/js代码压缩-css代码压缩-html代码压缩/" style="font-size: 10px;">js代码压缩 css代码压缩 html代码压缩</a> <a href="/tags/nodejs思维导图-git思维导图/" style="font-size: 10px;">nodejs思维导图 git思维导图</a> <a href="/tags/伪元素-伪类/" style="font-size: 10px;">伪元素 伪类</a> <a href="/tags/水平居中-垂直居中/" style="font-size: 10px;">水平居中 垂直居中</a>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li class='link'><a href='http://ahz549467483.github.io'>码猿之家</a></li>
+        
+          <li class='link'><a href='http://kangyuf.github.io/'>小康的博客</a></li>
+        
+          <li class='link'><a href='http://wangjing991.github.io/'>Jimwan</a></li>
+        
+          <li class='link'><a href='http://liushengguang.github.io/'>阳光与你同在</a></li>
+        
+          <li class='link'><a href='http://wangbin5614.github.io/'>细流</a></li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2016 Apple Pear
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
