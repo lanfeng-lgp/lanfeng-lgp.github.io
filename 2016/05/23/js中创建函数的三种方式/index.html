@@ -13,17 +13,18 @@
   
   
   
-  <title>Tag: Bootstrap简介 Bootstrap基础 | 苹果与梨的世界</title>
+  <title>js中创建函数的三种方式 | 苹果与梨的世界</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="无聊之作">
-<meta property="og:type" content="website">
-<meta property="og:title" content="苹果与梨的世界">
-<meta property="og:url" content="http://yoursite.com/tags/Bootstrap简介-Bootstrap基础/index.html">
+  <meta name="description" content="js中创建函数的三种方式:函数声明,函数表达式,函数对象方式.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js中创建函数的三种方式">
+<meta property="og:url" content="http://yoursite.com/2016/05/23/js中创建函数的三种方式/index.html">
 <meta property="og:site_name" content="苹果与梨的世界">
-<meta property="og:description" content="无聊之作">
+<meta property="og:description" content="js中创建函数的三种方式:函数声明,函数表达式,函数对象方式.">
+<meta property="og:updated_time" content="2016-05-23T13:16:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="苹果与梨的世界">
-<meta name="twitter:description" content="无聊之作">
+<meta name="twitter:title" content="js中创建函数的三种方式">
+<meta name="twitter:description" content="js中创建函数的三种方式:函数声明,函数表达式,函数对象方式.">
   
     <link rel="alternative" href="http://lanfeng-lgp.github.io/" title="苹果与梨的世界" type="application/atom+xml">
   
@@ -66,46 +67,94 @@
     </nav>
 </header>
       <div id="main" class="wrapper">
-        <div id="primary" class="site-content"><div id="content" role="main">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-js中创建函数的三种方式" class="post-js中创建函数的三种方式 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="post type-post status-publish format-standard hentry archive-type-post">
-  <header class="entry-header">
-      
-  
-    <h1 class="entry-title">
-      <a class="archive-article-title" href="/2016/05/18/bootstrap基础/">bootstrap基础</a>
+    <h1 class="entry-title article-title">
+      js中创建函数的三种方式
     </h1>
   
 
-  </header>
-  <footer class="entry-meta">
-    <a href="/2016/05/18/bootstrap基础/">
-    <time datetime="2016-05-18T11:10:37.000Z" class="entry-date">
-        2016-05-18
+        
+        <div class="comments-link">
+            
+            <a href="/2016/05/23/js中创建函数的三种方式/#comments" class="leave-reply">评论</a>
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2016/05/23/js中创建函数的三种方式/" data-id="ciok0c2ea000o8ojt5c63jdax" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>js中创建函数的三种方式:函数声明,函数表达式,函数对象方式.<br><a id="more"></a></p>
+<h2 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h2><pre><code>function sum1(num1,num2){
+    return num1+num2;
+}
+</code></pre><h2 id="函数表达式"><a href="#函数表达式" class="headerlink" title="函数表达式"></a>函数表达式</h2><pre><code>var sum2 = function(num1,num2){
+    return num1+num2;
+}
+</code></pre><h2 id="函数对象方式"><a href="#函数对象方式" class="headerlink" title="函数对象方式"></a>函数对象方式</h2><pre><code>var sum3 = new Function(&quot;num1&quot;,&quot;num2&quot;,&quot;return num1+num2&quot;);
+console.log(sum3(2,3));//5
+一般不推荐用这种方法定义函数。
+</code></pre><p>函数声明在代码执行以前被加载到作用域中，函数表达式则是在代码执行到那一行的时候才会有定义</p>
+<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><h3 id="delete"><a href="#delete" class="headerlink" title="delete"></a>delete</h3><p>delete可以删除对象属性及变量<br>对象属性可以删除,直接用delelte删除不了变量,删除不了原型链中的变量<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">对象属性</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">fun</span></span>()&#123; </span><br><span class="line">	this.name = <span class="string">'mm'</span>; </span><br><span class="line">&#125; </span><br><span class="line">var obj = new fun(); </span><br><span class="line">console.log(obj.name);//mm </span><br><span class="line">delete obj.name; </span><br><span class="line">console.log(obj.name); //undefined</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">变量</span><br><span class="line">var name = <span class="string">'lily'</span>;</span><br><span class="line">delete name;</span><br><span class="line">console.log(name); //lily</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">原型链中的变量</span><br><span class="line">fun.prototype.age = 18;</span><br><span class="line">delete obj.age;</span><br><span class="line">console.log(obj.age) //18</span><br></pre></td></tr></table></figure>
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2016/05/23/js中创建函数的三种方式/">
+    <time datetime="2016-05-23T12:46:51.000Z" class="entry-date">
+        2016-05-23
     </time>
 </a>
     
     
   <span class="article-delim">&#8226;</span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bootstrap简介-Bootstrap基础/">Bootstrap简介 Bootstrap基础</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/函数声明-函数表达式-函数对象方式/">函数声明 函数表达式 函数对象方式</a></li></ul>
 
     </footer>
 </article>
-  
-  
-    </div></section>
-  
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2016/05/23/js数据类型/" rel="next">js数据类型 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+<section id="comments">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-js中创建函数的三种方式" data-title="js中创建函数的三种方式" data-url="http://yoursite.com/2016/05/23/js中创建函数的三种方式/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:'true'};
+    (function() {
+	  var ds = document.createElement('script');
+	  ds.type = 'text/javascript';ds.async = true;
+	  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	  ds.charset = 'UTF-8';
+	  (document.getElementsByTagName('head')[0]
+	   || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+  <!-- 多说公共JS代码 end -->
+</section>
+
 
 </div></div>
         <div id="secondary" class="widget-area" role="complementary">
